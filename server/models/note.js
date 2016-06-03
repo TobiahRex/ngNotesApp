@@ -24,9 +24,12 @@ noteSchema.statics.locate = (noteId, cb) => { // noteId = '_id'
 };
 
 noteSchema.statics.update = (updatedNote, cb) => { // updateNote = 'Full schema Obj to replace old Obj'.
+  console.log('UpdateNote\n', updatedNote);
   if(!updatedNote) return cb({ERROR : 'NOTHING to append.'});
-  Note.findByIdAndUpdate(updatedNote._id, {$set : updatedNote }, (err, updatedDbNote)=>{
-    err ? cb(err) : cb(null, updatedDbNote);
+  Note.findByIdAndUpdate(updatedNote.id, {$set : updatedNote.body }, (err, outdatedDbNote)=>{
+    err ? cb(err) : Note.findById(outdatedDbNote._id, (err, updatedDbNote)=> {
+      err ? cb(err) : cb(updatedDbNote);
+    });
   });
 };
 

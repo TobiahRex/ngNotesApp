@@ -1,0 +1,28 @@
+{
+  "name": "ngNotesApp",
+  "version": "1.0.0",
+  "description": "*This App was built upon completing CodeSchool's* [Staying Sharp With Angular](https://www.codeschool.com/courses/staying-sharp-with-angular-js) *course.  It's intent was to grow my understanding of Angular's functional capability in a practical application.*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiahRex/ngNotesApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TobiahRex/ngNotesApp/issues"
+  },
+  "homepage": "https://github.com/TobiahRex/ngNotesApp#readme",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.19",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "socket.io": "^1.4.6"
+  }
+}

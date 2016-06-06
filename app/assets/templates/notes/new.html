@@ -1,0 +1,21 @@
+<a href='#/notes' type="text" class="btn btn-info">Index</a>
+{{error}}
+<h3>New Note</h3>
+<form action="">
+  <fieldset class="form-group">
+    <label for="title">Title</label>
+    <input type="text" id='title' name='title' class="form-control" ng-model='note.title'>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label for="description">Description</label>
+    <input type="text" id='description' name='description' class="form-control" ng-model='note.description'>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label for="content">Content</label>
+    <input type="text" id='content' name='content' class="form-control" ng-model='note.content'>
+  </fieldset>
+
+  <input type="submit" class="btn btn-success" ng-click='newNote(note)' ng-disabled='isSaving' value="{{isSaving ? 'Saving...' : 'Save' }}"/>
+</form>

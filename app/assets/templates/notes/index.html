@@ -1,1 +1,8 @@
-<h1>Notes Index</h1>
+<a ng-href='#/notes/new' type="text" class="btn btn-primary">New Note</a>
+
+<h2>Notes</h2>
+<hr>
+<div ng-repeat='note in notes' class='col-xs-5 col-xs-offset-1'>
+  <h3><a ng-href="#/notes/{{note._id}}">{{note.title}}</a></h3>
+  <p>{{note.description}}</p>
+</div>

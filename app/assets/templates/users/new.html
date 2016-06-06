@@ -1,0 +1,16 @@
+<a href='#/users' type="text" class="btn btn-info">Index</a>
+{{error}}
+<h3>New User</h3>
+<form>
+  <fieldset class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id='name' name='name' class="form-control" ng-model='user.name'>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label for="bio">Bio</label>
+    <input type="text" id='bio' name='bio' class="form-control" ng-model='user.bio'>
+  </fieldset>
+
+  <input type="submit" class="btn btn-success" ng-click='newUser(user)' ng-disabled='isSaving' value="{{isSaving ? 'Saving...' : 'Save' }}"/>
+</form>

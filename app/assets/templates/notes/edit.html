@@ -1,1 +1,22 @@
-<h1>Note edit</h1>
+<a ng-href="#/notes" class="btn btn-info">Index</a>
+<a ng-href="#/notes/{{note._id}}" class="btn btn-info">Note</a>
+
+<h1>Edit: <i>{{note.title}}</i></h1>
+<form>
+  <fieldset class='form-group'>
+    <label for="title">Title</label>
+    <input class='form-control' type="text" id="title" name="title" ng-model="note.title">
+  </fieldset>
+
+  <fieldset class='form-group'>
+    <label for="description">Description</label>
+    <input class='form-control' type="text" id="description" name="description" ng-model="note.description">
+  </fieldset>
+
+  <fieldset class='form-group'>
+    <label for="content">Content</label>
+    <textarea class='form-control' type="text" id="content" name="content" ng-model="note.content"></textarea>
+  </fieldset>
+
+  <input type="submit" value="{{submitEdit ? 'Submitting...' : 'Save'}}" class="btn btn-default" ng-click='saveNote(note)' ng-disabled='submitEdit'>
+</form>

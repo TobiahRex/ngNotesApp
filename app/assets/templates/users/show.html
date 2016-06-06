@@ -1,0 +1,9 @@
+<a ng-href="#/notes" class="btn btn-info">Index</a>
+<div class="page-header">
+  <h3> {{user.name}} </h3>
+    <small>{{user.userId}}</small>
+</div>
+<p>{{user.bio}}</p>
+<p><span class="label label-success">{{user.job}}</span></p>
+<a ng-href="#/users/{{user._id}}/edit" class="btn btn-default">Edit User</a>
+<a href="" ng-click='deleteUser(user)' class="btn btn-danger">Delete User</a>

@@ -1,0 +1,8 @@
+<a ng-href='#/users/new' type="text" class="btn btn-primary">New User</a>
+
+<h2>Users</h2>
+<hr>
+<div ng-repeat='user in users' class='col-xs-5 col-xs-offset-1'>
+  <h3><a ng-href="#/users/{{user._id}}">{{user.name}}</a></h3>
+  <p>{{user.bio}}</p>
+</div>

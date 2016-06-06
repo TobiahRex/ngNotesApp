@@ -1,0 +1,17 @@
+<a ng-href="#/users" class="btn btn-info">Users</a>
+<a ng-href="#/users/{{user._id}}" class="btn btn-info">User</a>
+
+<h1>Edit: <i>{{user.name}}</i></h1>
+<form>
+  <fieldset class='form-group'>
+    <label for="name">Name</label>
+    <input class='form-control' type="text" id="name" name="name" ng-model="user.name">
+  </fieldset>
+
+  <fieldset class='form-group'>
+    <label for="bio">Bio</label>
+    <input class='form-control' type="text" id="bio" name="bio" ng-model="user.bio">
+  </fieldset>
+
+  <input type="submit" value="{{submitEdit ? 'Submitting...' : 'Save'}}" class="btn btn-default" ng-click='saveUser(user)' ng-disabled='submitEdit'>
+</form>

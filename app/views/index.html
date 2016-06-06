@@ -1,26 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='NoteWrangler'>
   <head>
     <meta>
-    <link rel="stylesheet" href="assets/styles/bootstrap.css">
-    <link rel="stylesheet" href="assets/styles/bootstrap.css">
-
     <title>ng-Notes App</title>
-  </head>
-  <body>
-    <h1>ngNotes</h1>
-
+    <link rel="stylesheet" href="assets/styles/bootstrap.css">
+    <link rel="stylesheet" href="assets/styles/bootstrap-theme.css">
     <!-- Vendor -->
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/angular.js"></script>
     <script src="assets/js/vendor/angular-resource.js"></script>
     <script src="assets/js/vendor/angular-route.js"></script>
-    <!-- <script src="assets/js/vendor/bootstrap.js"></script> -->
+    <script src="assets/js/vendor/bootstrap.js"></script>
 
     <!-- App -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/routes.js"></script>
 
     <!-- Directives -->
+
     <!-- Controllers -->
+    <script src="assets/js/controllers/noteIndexController.js"></script>
+    <script src="assets/js/controllers/noteNewController.js"></script>
+    <script src="assets/js/controllers/noteShowController.js"></script>
+    <script src="assets/js/controllers/noteEditController.js"></script>
+
+    <script src="assets/js/controllers/userIndexController.js"></script>
+    <script src="assets/js/controllers/userNewController.js"></script>
+    <script src="assets/js/controllers/userShowController.js"></script>
+    <script src="assets/js/controllers/userEditController.js"></script>
+
     <!-- Services -->
+    <script src="assets/js/services/noteResource.js"></script>
+    <script src="assets/js/services/userResource.js"></script>
+  </head>
+  <body>
+    <h1 class='container-fluid'>Note Wrangler</h1>
+    <div ng-view class='container-fluid'></div>
+
   </body>
 </html>

@@ -8,15 +8,13 @@ router.route('/')
 .get((req, res) => {
   Note.find({}, res.handle);
 })
+.post((req, res) => {
+  Note.newNote(req.body, res.handle);
+})
 .delete((req, res) => {
   Note.remove(res.handle);
 });
 
-
-router.route('/new')
-.post((req, res) => {
-  Note.newNote(req.body, res.handle);
-})
 
 router.route('/:id')
 .get((req, res) => {
